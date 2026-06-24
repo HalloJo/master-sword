@@ -42,17 +42,44 @@ function Sword() {
 
 export default function SwordScene() {
   return (
-    <div style={{ width: '100vw', height: '100vh', background: '#000000' }}>
+    <div style={{ position: 'relative', width: '100vw', height: '100vh' }}>
+      {/* SVG grain filter — defined once, applied via featureless overlay below */}
+      <svg width="0" height="0" style={{ position: 'absolute' }}>
+        <defs>
+          <filter id="grain">
+            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
+            <feColorMatrix type="saturate" values="0" />
+            <feBlend in="SourceGraphic" mode="multiply" />
+          </filter>
+        </defs>
+      </svg>
+
       <Canvas
+        style={{ background: 'radial-gradient(ellipse at center, #f5f0e8 0%, #e8e0d0 40%, #d4cbb8 100%)' }}
         gl={{ antialias: true }}
         camera={{ position: [0, 0, 6], fov: 45 }}
         shadows="percentage"
       >
-        <ambientLight color="#ffffff" intensity={0.8} />
-        <directionalLight color="#ffffff" intensity={1.5} position={[0, 8, 4]} />
-        <pointLight color="#88aaff" intensity={1} position={[-3, 1, 4]} />
+        <ambientLight color="#fff8f0" intensity={1.2} />
+        <directionalLight position={[5, 8, 5]}   color="#ffffff" intensity={2}   />
+        <directionalLight position={[-3, 2, -2]}  color="#ffd580" intensity={1.2} />
+        <pointLight       position={[0, -2, 3]}   color="#aaccff" intensity={0.8} />
+        <pointLight       position={[2, 4, -3]}   color="#ffc850" intensity={1.5} />
         <Sword />
       </Canvas>
+
+      {/* Vignette */}
+      <div style={{
+        position: 'absolute', inset: 0, pointerEvents: 'none',
+        background: 'radial-gradient(ellipse at center, transparent 40%, rgba(180,165,140,0.4) 100%)',
+      }} />
+
+      {/* Film grain */}
+      <div style={{
+        position: 'absolute', inset: 0, pointerEvents: 'none',
+        filter: 'url(#grain)', opacity: 0.03,
+        background: '#fff',
+      }} />
     </div>
   )
 }
