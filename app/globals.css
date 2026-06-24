@@ -1,14 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #0a0a0f;
+  --color-background: #f5f0e8;
+  --color-text-heading: #1a1510;
+  --color-text-subtitle: #6b5e4e;
+  --color-text-body: #3d322a;
   --color-blade-blue: #4a90d9;
-  --color-sacred-gold: #ffd700;
-  --color-dim: rgba(255 255 255 / 0.06);
+  --color-sacred-gold: #c8960a;
+  --color-dim: rgba(26 21 16 / 0.06);
 
-  --font-family-serif: var(--font-cinzel), 'Georgia', serif;
-  --font-family-sans: var(--font-inter), system-ui, sans-serif;
-  --font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --font-heading: var(--font-heading);
+  --font-cinzel: var(--font-cinzel);
+  --font-body: var(--font-body);
 }
 
 *,
@@ -21,16 +24,20 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: #0a0a0f;
-  color: #e8e8f0;
-  font-family: var(--font-family-sans);
+  background: #f5f0e8;
+  color: #1a1510;
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
-  /* scroll-behavior managed by GSAP, not CSS */
   overflow-x: hidden;
 }
 
-/* Cinzel for headings declared via layout next/font */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-family-serif);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
   font-weight: 400;
+  color: #1a1510;
 }
