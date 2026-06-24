@@ -1,7 +1,9 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+  // Turbopack is default in Next.js 16
+  // GLB files are fetched from /public, no bundler config needed.
+  // If Three.js shader imports cause issues, add resolveAlias here.
+}
 
-export default nextConfig;
+export default nextConfig
