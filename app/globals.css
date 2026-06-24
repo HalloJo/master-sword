@@ -10,34 +10,35 @@
   --color-dim: rgba(26 21 16 / 0.06);
 
   --font-heading: var(--font-heading);
-  --font-cinzel: var(--font-cinzel);
   --font-body: var(--font-body);
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  background: #f5f0e8;
-  color: #1a1510;
-  font-family: var(--font-body);
-  -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
-}
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background: #f5f0e8;
+    color: #1a1510;
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-heading);
-  font-weight: 400;
-  color: #1a1510;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    /* font-weight: 400; */
+    color: #1a1510;
+  }
 }

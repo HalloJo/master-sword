@@ -20,7 +20,7 @@ export default function ChapterOverlay() {
       className="fixed inset-x-0 bottom-[20%] z-10 pointer-events-none text-center"
       style={{ opacity }}
     >
-      <h1 className="m-0 font-light leading-[1.1] tracking-[0.02em] text-text-heading font-heading text-[clamp(40px,6vw,72px)]">
+      <h1 className="m-0 leading-[1.1] tracking-tighter text-text-heading font-heading font-bold text-[clamp(40px,6vw,72px)]">
         The Blade of Evil&apos;s Bane
       </h1>
       <p className="mt-3.5 text-sm text-text-subtitle tracking-[0.2em] uppercase font-body">

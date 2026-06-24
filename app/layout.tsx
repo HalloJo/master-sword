@@ -1,17 +1,11 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Cinzel, Inter } from "next/font/google";
+import { Inter, DM_Sans } from "next/font/google";
 import "./globals.css";
 
-const cormorant = Cormorant_Garamond({
+const dm_sans = DM_Sans({
   subsets: ["latin"],
-  weight: ["300", "400", "600"],
+  weight: ["300", "400", "600", "700", "800", "900"],
   variable: "--font-heading",
-});
-
-const cinzel = Cinzel({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-cinzel",
 });
 
 const inter = Inter({
@@ -36,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${cinzel.variable} ${inter.variable}`}>
+    <html lang="en" className={`${dm_sans.variable} ${inter.variable}`}>
       <body>{children}</body>
     </html>
   );

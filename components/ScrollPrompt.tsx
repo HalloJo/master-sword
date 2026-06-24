@@ -20,7 +20,7 @@ export default function ScrollPrompt() {
         transform: `translateY(calc(-50% + ${offsetY}px))`,
       }}
     >
-      <p className="m-0 font-cinzel text-xs tracking-[0.3em] uppercase text-text-subtitle">
+      <p className="m-0 font-heading text-xs tracking-[0.3em] uppercase text-text-subtitle">
         Scroll to begin your journey
       </p>
       <div className="mt-4 animate-bounce text-text-subtitle text-sm select-none">
