@@ -17,9 +17,9 @@ export const useScrollStore = create<ScrollStore>()(
     chapterProgress: 0,
     setProgress: (progress) => {
       const clamped = Math.max(0, Math.min(1, progress))
-      const raw = clamped * 5
+      const raw = clamped * 6  // 6 chapters → each gets 1/6 of scroll (~16.7%)
       const chapter = Math.min(Math.floor(raw), 5)
-      const chapterProgress = raw - chapter
+      const chapterProgress = Math.min(raw - chapter, 1)
       set({ progress: clamped, chapter, chapterProgress })
     },
   }))

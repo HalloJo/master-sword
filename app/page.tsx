@@ -1,5 +1,5 @@
-import { SwordExperience } from '@/components/SwordExperience'
+import ClientOnly from "@/components/ClientOnly";
 
 export default function Home() {
-  return <SwordExperience />
+  return <ClientOnly />;
 }

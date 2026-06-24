@@ -15,7 +15,7 @@ export interface Chapter {
 export const CHAPTERS: Chapter[] = [
   {
     id: 0,
-    subtitle: 'Awakening',
+    subtitle: 'A legend forged in the Sacred Realm',
     title: "The Blade of Evil's Bane",
     body: 'In the age before memory, the Goddess Hylia forged a sacred light and sealed it within steel. A weapon not of war — but of destiny.',
     accentColor: '#4a90d9',
