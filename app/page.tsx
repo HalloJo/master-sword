@@ -1,5 +1,13 @@
-import ClientOnly from "@/components/ClientOnly";
+import ScrollSetup from '@/components/ScrollSetup'
+import ClientOnly from '@/components/ClientOnly'
+import ChapterOverlay from '@/components/ChapterOverlay'
 
 export default function Home() {
-  return <ClientOnly />;
+  return (
+    <>
+      <ScrollSetup />
+      <ClientOnly />
+      <ChapterOverlay />
+    </>
+  )
 }
